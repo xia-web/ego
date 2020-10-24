@@ -1,0 +1,23 @@
+ego:
+  fastdfs:
+    nginx: http://39.106.114.169:8888/
+  bigad:
+    categoryId: 89
+  # redis 软编码
+  redis:
+    bigad:
+      cacheName: com.ego.portal
+      key: bigadd
+
+  # rabbitMQ 软编码
+  rabbitmq:
+    content:
+      queueName: content
+    item:
+      insertName: insertItem
+      updateName: updateItem
+
+  # 开发环境
+  search:
+    insert: http://localhost:8083/insert
+    update: http://localhost:8083/delete

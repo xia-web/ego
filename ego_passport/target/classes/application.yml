@@ -1,0 +1,18 @@
+server:
+  port: 8084
+
+dubbo:
+  application:
+    name: ego_passport
+  registry:
+    address: zookeeper://39.106.114.169:2181
+
+# 视图解析器
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  profiles:
+    active: commons,redis
+
