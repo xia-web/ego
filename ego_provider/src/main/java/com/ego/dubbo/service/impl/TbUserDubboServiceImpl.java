@@ -19,19 +19,19 @@ public class TbUserDubboServiceImpl implements TbUserDubboService {
         TbUserExample tbUserExample = new TbUserExample();
         TbUserExample.Criteria criteria = tbUserExample.createCriteria();
 
-        System.out.println(user.getUsername()+"--"+user.getEmail()+user.getPhone());
+        System.out.println(user.getUsername() + "--" + user.getEmail() + user.getPhone());
         // 更具用户名，邮箱，密码进行查询
-        if (user.getUsername() != null){
+        if (user.getUsername() != null) {
             criteria.andUsernameEqualTo(user.getUsername());
-        }else if(user.getEmail() != null){
+        } else if (user.getEmail() != null) {
             criteria.andEmailEqualTo(user.getEmail());
-        }else if (user.getPhone() != null){
+        } else if (user.getPhone() != null) {
             criteria.andPhoneEqualTo(user.getPhone());
         }
 
         List<TbUser> tbUsers = tbUserMapper.selectByExample(tbUserExample);
-        if (tbUsers != null && tbUsers.size() >0){
-            System.out.println(tbUsers.get(0).getUsername()+tbUsers.get(0).getPhone()+tbUsers.get(0).getEmail());
+        if (tbUsers != null && tbUsers.size() > 0) {
+            System.out.println(tbUsers.get(0).getUsername() + tbUsers.get(0).getPhone() + tbUsers.get(0).getEmail());
             return tbUsers.get(0);
         }
         return null;
@@ -41,5 +41,16 @@ public class TbUserDubboServiceImpl implements TbUserDubboService {
     public int registry(TbUser user) {
 
         return tbUserMapper.insert(user);
+    }
+
+    @Override
+    public TbUser selectByUsernamePwd(TbUser tbUser) {
+        TbUserExample example = new TbUserExample();
+        example.createCriteria().andUsernameEqualTo(tbUser.getUsername()).andPasswordEqualTo(tbUser.getPassword());
+        List<TbUser> list = tbUserMapper.selectByExample(example);
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
     }
 }

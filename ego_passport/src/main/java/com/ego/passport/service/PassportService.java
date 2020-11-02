@@ -12,4 +12,5 @@ public interface PassportService {
     EgoResult checkUser(TbUser tbUser);
 
     EgoResult registerUser(TbUser tbUser);
+    EgoResult login(TbUser tbUser);
 }
