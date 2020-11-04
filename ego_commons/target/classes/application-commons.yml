@@ -21,3 +21,11 @@ ego:
   search:
     insert: http://localhost:8083/insert
     update: http://localhost:8083/delete
+  item:
+    details:
+      rediskey: 'com.ego.item::details:'
+  cart:
+    tempcart: tempcart
+    rediskey: 'cart:'
+  passport:
+    loginurl: http://localhost:8084/user/showLogin

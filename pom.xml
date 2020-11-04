@@ -22,6 +22,7 @@
         <module>ego_rabbitmq_send</module>
         <module>ego_search</module>
         <module>ego_passport</module>
+        <module>ego_cart</module>
     </modules>
 
     <!-- Spring Boot的父项目，声明所有Spring Boot相关版本 -->

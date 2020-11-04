@@ -16,6 +16,7 @@
         <module name="ego_redis" />
         <module name="ego_provider" />
         <module name="ego_passport" />
+        <module name="ego_cart" />
         <module name="ego_portal" />
         <module name="ego_commons" />
         <module name="ego_rabbitmq_receiver" />
@@ -25,6 +26,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ego_api" options="-parameters" />
+      <module name="ego_cart" options="-parameters" />
       <module name="ego_commons" options="-parameters" />
       <module name="ego_item" options="-parameters" />
       <module name="ego_manage" options="-parameters" />

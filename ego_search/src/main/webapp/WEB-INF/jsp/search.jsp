@@ -17,7 +17,7 @@
 <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="/js/base-2011.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/base-2011.js" chart="utf-8"></script>
 <!-- header start -->
 <jsp:include page="commons/header.jsp" />
 <!-- header end -->
